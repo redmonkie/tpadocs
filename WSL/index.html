@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>WSL - TPASYSTEMS</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "WSL", url: "#_top", children: [
+              {title: "Install", url: "#install" },
+              {title: "Operations", url: "#operations" },
+              {title: "Troubleshooting", url: "#troubleshooting" },
+              {title: "Useful Links", url: "#useful-links" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script>
+      <script src="../search/main.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../ubuntu/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../ubuntu/" class="btn btn-xs btn-link">
+        Ubuntu FAQ
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="wsl">WSL</h1>
+<h2 id="install">Install</h2>
+<p>Goto the windows store to find various versions of linux distrobutions.<br />
+Install and create username.</p>
+<h3 id="check-versions">Check Versions</h3>
+<p>To see what the default distro is </p>
+<pre><code>wsl -l
+</code></pre>
+
+<p>Output:</p>
+<pre><code>PS C:\Users\ashle&gt; wsl -l
+Windows Subsystem for Linux Distributions:
+Ubuntu-18.04 (Default)
+</code></pre>
+
+<p>To check which version of WSL each distro is using and if it is running. Open powershell.</p>
+<pre><code>wsl -l -v
+</code></pre>
+
+<p>Output:</p>
+<pre><code>PS C:\Users\ashle&gt; wsl -l -v
+  NAME            STATE           VERSION
+* Ubuntu-18.04    Running         1
+</code></pre>
+
+<h3 id="set-wsl2-as-default">Set WSL2 as default</h3>
+<p>In powershell run the following.</p>
+<pre><code>wsl --set-default-version 2
+</code></pre>
+
+<h2 id="operations">Operations</h2>
+<h3 id="open-file-from-explorer">Open file from explorer</h3>
+<p>Put the following in the browser to access files from within WSL.</p>
+<pre><code>\\wsl$\[Distrobution]
+\\wsl$\Ubuntu-20.04
+</code></pre>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="kernel-upgrade">Kernel Upgrade</h3>
+<p>If you recieve this error</p>
+<pre><code>PS C:\Users\ashle&gt; wsl --set-version Ubuntu-20.04 2
+Conversion in progress, this may take a few minutes...
+WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel
+</code></pre>
+
+<p>You need to download a small kernal upgrade from the link above.</p>
+<h3 id="switch-on-virtual-machine-platform">Switch on Virtual Machine Platform</h3>
+<p>If you get:</p>
+<pre><code>PS C:\Users\ashle&gt; wsl --set-version Ubuntu-18.04 2
+Conversion in progress, this may take a few minutes...
+For information on key differences with WSL 2 please visit https://aka.ms/wsl2
+Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS.
+For information please visit https://aka.ms/wsl2-install
+</code></pre>
+
+<p>Go into windows and features and tick Virtual Machine Platform. It wasn't ticked after upgrading to WSL2.</p>
+<h2 id="useful-links">Useful Links</h2>
+<p><a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows WSL Guide</a><br />
+<a href="https://www.youtube.com/watch?time_continue=175&amp;v=ilKQHAFeQR0&amp;feature=emb_logo">YouTube Upgrade Video</a></p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../ubuntu/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../ubuntu/" class="btn btn-xs btn-link">
+        Ubuntu FAQ
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+</footer>
+
+</body>
+</html>

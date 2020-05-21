@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Lists & Dictionaries - TPASYSTEMS</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Lists &amp; Dictionaries", url: "#_top", children: [
+              {title: "Lists", url: "#lists" },
+              {title: "Tuple", url: "#tuple" },
+              {title: "Dictionaries", url: "#dictionaries" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script>
+      <script src="../search/main.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../functions/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../functions/" class="btn btn-xs btn-link">
+        Functions
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../py_basics/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../py_basics/" class="btn btn-xs btn-link">
+        Python Basics
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="lists-dictionaries">Lists &amp; Dictionaries</h1>
+<h2 id="lists">Lists</h2>
+<p>They use square brackets.</p>
+<pre><code class="python">userAge = [18, 19, 22, 25, 30]
+</code></pre>
+
+<h3 id="you-can-print-a-particular-value-in-a-list">You can print a particular value in a list.</h3>
+<pre><code class="python">print(userAge[1])
+19
+print(userAge[0])
+18
+print(userAge[-1])
+30
+</code></pre>
+
+<h3 id="you-can-have-empty-lists-and-fill-them-later-with-the-apend-function">You can have empty lists and fill them later with the apend() function</h3>
+<pre><code class="python">emptyList = []
+</code></pre>
+
+<h3 id="make-a-list-into-a-variable-variable-list">Make a list into a variable (variable = list)</h3>
+<pre><code class="python">userAgeV1 = userAge
+</code></pre>
+
+<h3 id="assign-index-to-a-variable-notation-24-is-known-as-a-slice">Assign index to a variable. Notation 2:4 is known as a slice.</h3>
+<pre><code class="python">userAgeV2 = userAge[2:4]
+</code></pre>
+
+<pre><code class="python">print (userAgeV2)
+[22, 25]
+</code></pre>
+
+<h3 id="the-third-number-in-the-slice-is-a-stepper-we-get-a-sublist-consisting-every-second-number">The third number in the slice is a stepper. We get a sublist consisting every second number.</h3>
+<pre><code class="python">userAgeV3 = userAge[1:5:2]
+print (userAgeV3)
+[19, 25]
+</code></pre>
+
+<h3 id="appending-to-a-list">Appending to a list</h3>
+<pre><code class="python">router =['891','2901', '2951', '4001']
+</code></pre>
+
+<h3 id="append-to-existing-list">Append to existing list</h3>
+<pre><code class="python">router.append('2950')
+#Append a list to a list
+router.append(['mx240', 'srx200']) 
+</code></pre>
+
+<p>Slice notations have useful defaults. The default for the first number is zero, and the default for the second number is size of the list being sliced.
+For instance, <code>userAge[ :4]</code> gives you values from index <code>0</code> to index <code>4-1</code> while <code>userAge[1: ]</code> gives you values from index <code>1</code> to index <code>5-1</code> (since the size of <code>userAge</code> is 5, i.e. <code>userAge</code> has 5 items).</p>
+<h2 id="tuple">Tuple</h2>
+<p>Tuples are just like lists, but you cannot modify their values. The initial values are the values that will stay for the rest of the program.  </p>
+<p>To declare a tuple, you write <code>tupleName = (initial values)</code>. Use parentheses ( ) when declaring a tuple.</p>
+<h3 id="multiple-values-are-separated-by-a-comma">Multiple values are separated by a comma.</h3>
+<pre><code class="python">monthsOfYear = (&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;)
+print(monthsOfYear[4])
+</code></pre>
+
+<h2 id="dictionaries">Dictionaries</h2>
+<p>Dictionary is a collection of related data PAIRS.</p>
+<pre><code class="python">userAge = {'Bjorn':32, 'Hatti':18, 'Matthew':44}
+</code></pre>
+
+<p>Or via a method</p>
+<pre><code class="python">userAge = dict(Bjorn = 32, Hatti = 18, Matthew = 44)
+</code></pre>
+
+<h3 id="to-print-a-users-age">To print a users age</h3>
+<pre><code class="python">print(userAge['Bjorn'])
+</code></pre>
+
+<h3 id="create-empty-dictinoaries-to-be-filled-in-later">Create empty dictinoaries to be filled in later</h3>
+<pre><code class="python">userName = dict()
+</code></pre>
+
+<h3 id="add-to-empty-dictionary">Add to empty dictionary</h3>
+<pre><code class="python">userName['John Smith'] = 'jsmith'
+</code></pre>
+
+<h3 id="delete-from-dictionary">Delete from dictionary</h3>
+<pre><code class="python">del userName['John Smith']
+</code></pre>
+
+<h3 id="display-list-in-easy-to-read-format">Display list in easy to read format</h3>
+<pre><code class="python">userCricket = {
+    'Brian Lara' : 'blara',
+    'Courtney Walsh' : 'cwalsh',
+    'Curtley Ambrose' : 'cambrose',
+    'Malcom Marshall' : 'mmarshall',
+}
+</code></pre>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../functions/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../functions/" class="btn btn-xs btn-link">
+        Functions
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../py_basics/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../py_basics/" class="btn btn-xs btn-link">
+        Python Basics
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+</footer>
+
+</body>
+</html>

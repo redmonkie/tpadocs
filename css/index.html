@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>CSS - TPASYSTEMS</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "CSS", url: "#_top", children: [
+              {title: "TAG/Class/ID Selectors", url: "#tagclassid-selectors" },
+              {title: "Sudo Class", url: "#sudo-class" },
+              {title: "CSS BOX Model", url: "#css-box-model" },
+              {title: "Display Properties", url: "#display-properties" },
+              {title: "Position Properties", url: "#position-properties" },
+              {title: "Dynamic Sizing", url: "#dynamic-sizing" },
+              {title: "Media Query", url: "#media-query" },
+              {title: "Code Refactoring", url: "#code-refactoring" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script>
+      <script src="../search/main.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../javascript/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../javascript/" class="btn btn-xs btn-link">
+        Javascript
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../functions/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../functions/" class="btn btn-xs btn-link">
+        Functions
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="css">CSS</h1>
+<pre><code class="css">selector{property : value;}
+Who{What : How;}
+</code></pre>
+
+<p>Best Practice is to have all the properties in alphabetical order.</p>
+<h2 id="tagclassid-selectors">TAG/Class/ID Selectors</h2>
+<ul>
+<li>Styling tags will change properties across all HTML tags</li>
+<li>Class allows you to specified a new class per HTML tag.</li>
+<li>Headings can only be used in one place.</li>
+</ul>
+<h3 id="tag">TAG</h3>
+<pre><code class="css">h2 {
+    color: #00adb5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+</code></pre>
+
+<h3 id="class">Class</h3>
+<p>Class attribute differentiates between properties.</p>
+<pre><code class="css">.class1 {
+    background-color: green;
+}
+</code></pre>
+
+<pre><code class="css">.class2 {
+    background-color: red;
+}
+&lt;img class=&quot;class1&quot; src=&quot;image1.jpg&quot;&gt; 
+&lt;img class=&quot;class2&quot; src=&quot;image2.jpg&quot;&gt;
+</code></pre>
+
+<h3 id="id">ID</h3>
+<pre><code class="css">#heading3 {
+    background-color: blue;
+}
+&lt;img id=&quot;heading3&quot; src=&quot;image1.jpg&quot;&gt; 
+</code></pre>
+
+<h2 id="sudo-class">Sudo Class</h2>
+<p>Represented via :<br />
+You append it to your class for extra functionality.</p>
+<pre><code class="css">img:hover {
+    border-color: aquamarine;
+}
+.class4434:shadow {
+    border-color: aquamarine;
+}
+</code></pre>
+
+<h2 id="css-box-model">CSS BOX Model</h2>
+<pre><code class="css">p {
+    margin: 1%; /* Gives space between any adjacent element */
+    border: 0px; /* */
+    padding: 2%; /* Increases the element to give padding to what's inside */
+}
+</code></pre>
+
+<h2 id="display-properties">Display Properties</h2>
+<p>You have inline syntaxes such as <code>&lt;img&gt;</code> <code>&lt;a&gt;</code> <code>&lt;span&gt;</code> and block syntaxes such as <code>&lt;p&gt;</code> <code>&lt;h1&gt;</code>  </p>
+<p>Allows you to modify stuff without dropping it onto another line but you can't change the width in the class.</p>
+<pre><code class="css">&lt;span class=&quot;class5&quot;&gt;&lt;/span&gt;
+</code></pre>
+
+<p>You can modify a block syntax to be half way</p>
+<pre><code class="css">p {
+  display: inline-block
+}
+</code></pre>
+
+<h2 id="position-properties">Position Properties</h2>
+<ul>
+<li>Static (HTML Rules)</li>
+<li>Relative (Position the element as if it would be static. Ex, 30px from the left) Coordinates (Top, Bottom, Left, Right). Relative positioning doesn't affect any other element.</li>
+<li>Absolute (Position the element relative to it's parent). It does effect the flow of the other elements.</li>
+<li>Fixed -  Keeps the position of the element where it is on the page even if you scroll.<br />
+<em>Check out codepen.io for my saved examples.</em></li>
+</ul>
+<h2 id="dynamic-sizing">Dynamic Sizing</h2>
+<ul>
+<li>When you change the browser settings to increase font this wont allow px text to change. (Using the Zoom feature will scale everything)  </li>
+<li>Pixel - Static.   </li>
+<li>Percent - If you use % you'll need to work out the conversion. 100% = 16px, 565.2 = 90px etc..  </li>
+<li>EM - Long story short 1em = 16px</li>
+<li>Dynamic values are inherited. Which means if you set body font size is 20% and H1 font size is 100% the H1 font will be 120%.</li>
+<li>REM - is root font size which means it wont inherit from anywhere else. This method is preferred.  </li>
+</ul>
+<p>To convert<br />
+https://www.w3schools.com/cssref/css_pxtoemconversion.asp</p>
+<h2 id="media-query">Media Query</h2>
+<p>@media <code>&lt;type&gt;</code> <code>&lt;feature&gt;</code>  </p>
+<h2 id="code-refactoring">Code Refactoring</h2>
+<ol>
+<li>Readability</li>
+<li>Modularity</li>
+<li>Efficiency</li>
+<li>Length</li>
+</ol>
+<p>CSS Layouts:<br />
+- Put all the HTML elements at the top.
+- The group everything else by sections
+- <code>@media</code> should be at the bottom.</p>
+<p>Pairing classes and elements together make for a more specific grouping. You read it right to left.</p>
+<pre><code class="css">.class h1 {color: red;}
+</code></pre>
+
+<p>This says any h1 inside the specified class will be red. Any other <code>h1</code> (child) outside the parent <code>.class</code> wont be affected.</p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../javascript/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../javascript/" class="btn btn-xs btn-link">
+        Javascript
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../functions/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../functions/" class="btn btn-xs btn-link">
+        Functions
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+</footer>
+
+</body>
+</html>

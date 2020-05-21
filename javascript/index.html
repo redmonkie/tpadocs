@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Javascript - TPASYSTEMS</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Javascript", url: "#_top", children: [
+              {title: "Multiline Comment", url: "#multiline-comment" },
+              {title: "Type of", url: "#type-of" },
+              {title: "Prompt (Input)", url: "#prompt-input" },
+              {title: "String Concatination", url: "#string-concatination" },
+              {title: "Variables", url: "#variables" },
+              {title: "String Length/Number Retrival", url: "#string-lengthnumber-retrival" },
+              {title: "Maths", url: "#maths" },
+              {title: "Functions", url: "#functions" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script>
+      <script src="../search/main.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../windows/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../windows/" class="btn btn-xs btn-link">
+        Windows
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../css/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../css/" class="btn btn-xs btn-link">
+        CSS
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="javascript">Javascript</h1>
+<h2 id="multiline-comment">Multiline Comment</h2>
+<pre><code class="js">/* This is a 
+multiline comment.
+Thank you
+Goodnight */
+</code></pre>
+
+<h2 id="type-of">Type of</h2>
+<p>Shows you what datatype is in the brackets. </p>
+<pre><code class="js">typeof(23);
+typeof(&quot;Ash&quot;);
+typeof(true)
+</code></pre>
+
+<h2 id="prompt-input">Prompt (Input)</h2>
+<p>To ask the user for a value</p>
+<pre><code class="js">var dogAge = prompt(&quot;What is your dogs age?&quot;);
+</code></pre>
+
+<h2 id="string-concatination">String Concatination</h2>
+<p>Make sure you put spaces between varaibles and <code>+</code> f</p>
+<pre><code class="js">var message = &quot;Hello&quot;;
+var name = &quot;Marselle&quot;;
+
+alert(message + name);
+</code></pre>
+
+<h2 id="variables">Variables</h2>
+<p>If you want to change the varable you only need to use the 'var' once after the container is created.</p>
+<pre><code class="js">var myName = &quot;Marselle&quot;; 
+</code></pre>
+
+<p>Prompts user for input</p>
+<pre><code class="js">var yourName = prompt(&quot;What is your name?&quot;);
+</code></pre>
+
+<p>Pops out an alert with the variable of myName</p>
+<pre><code class="js">alert(&quot;My name is &quot; + myName + &quot;. Welcome to my site &quot; + yourName); 
+</code></pre>
+
+<h2 id="string-lengthnumber-retrival">String Length/Number Retrival</h2>
+<p>Below is code I made to ask a message, display how many characters are in the message and work out the remaining characters if 280 is max.</p>
+<pre><code class="js">// Prompt that feeds into variable.
+var message = prompt(&quot;Whats your beef?&quot;);
+// Variable that works out remainder
+var remainder = 280 - message.length
+// Display message
+alert(&quot;You have written &quot; + message.length + &quot; characters, you have &quot; + remainder + &quot; left.&quot;);
+</code></pre>
+
+<p>It can also be written simpler by doing the <code>maths</code> within the alert using <code>()</code>.</p>
+<pre><code class="js">var message = prompt(&quot;Whats your beef?&quot;);
+
+alert(&quot;You have written &quot; + message.length + &quot; characters, you have &quot; + (280 - message.length) + &quot; left.&quot;);
+</code></pre>
+
+<h3 id="string-slicing">String Slicing</h3>
+<p>Using the <code>slice()</code> method you can specify what part of a string you want to include. <em>Starts at 0</em>.</p>
+<pre><code class="js">var name = &quot;Marselle&quot;
+name.slice(2,3)
+&gt; &quot;r&quot;
+
+// Range (Start at 3 up to but not including 7)
+name.slice(3,7)
+&gt; &quot;sell&quot;
+</code></pre>
+
+<p>Below will slice the output to be maximum of 140 characters</p>
+<pre><code class="js">var message = prompt(&quot;Whats your beef?&quot;);
+
+var message = message.slice(0,140)
+
+alert(message);
+</code></pre>
+
+<p>Single line version of above which will:<br />
+1. Prompt<br />
+2. Slice<br />
+3. Alert  </p>
+<pre><code class="js">alert(prompt(&quot;Whats your beef?&quot;).slice(0,140));
+</code></pre>
+
+<h3 id="change-string-case">Change String Case</h3>
+<pre><code class="js">var name = &quot;Marselle&quot;
+name = name.toUpperCase();
+&gt; &quot;MARSELLE&quot;
+
+var name = &quot;Marselle&quot;
+name = name.toLowerCase();
+&gt; &quot;marselle&quot;
+</code></pre>
+
+<h3 id="string-case-and-slice">String Case and Slice</h3>
+<p>By using slice we can isolate which part of the variable we make upper case and whats lower case.<br />
+Also as we don't know the length of the users name by starting the slice at <code>1</code> and then using the <code>.length</code> method we say make the second character and then the <em>length</em> of the variable lower case.</p>
+<pre><code class="js">var name = prompt(&quot;What is your name?&quot;);
+alert(name.slice(0,1).toUpperCase() + name.slice(1,name.length).toLowerCase());
+</code></pre>
+
+<h2 id="maths">Maths</h2>
+<p>Look at <a href="../py_basics/#Math Operators">Python Maths</a> for all mathmatical syntaxs.</p>
+<p>There's an order of presendence. <code>*</code>, <code>%</code> before <code>+</code>, <code>-</code>.<br />
+5 <code>*</code> 2 would come before 3 <code>+</code> 5</p>
+<pre><code class="javascript">var cost = 3 + 5 * 2
+</code></pre>
+
+<p>If you wanted 3 <code>+</code> 5 to come first you would encase it in brackets.</p>
+<pre><code class="js">var cost = (3+5) * 2
+</code></pre>
+
+<p>It's good practice to add the parenthesis even though you know the multiplication or divison is happening first.</p>
+<pre><code class="js">var cost = 3 + (5 * 2)
+</code></pre>
+
+<h3 id="incrementdecrement">Increment/Decrement</h3>
+<p>To increase a value use <code>+=</code> &amp; <code>*=</code>. To decrease a value use <code>-=</code> &amp; <code>/=</code>.</p>
+<pre><code class="js">var x = 7;
+var y = 10;
+
+x += 2;
+&gt; 9
+
+y -= 6;
+&gt; 4
+</code></pre>
+
+<h2 id="functions">Functions</h2>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../windows/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../windows/" class="btn btn-xs btn-link">
+        Windows
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../css/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../css/" class="btn btn-xs btn-link">
+        CSS
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+</footer>
+
+</body>
+</html>

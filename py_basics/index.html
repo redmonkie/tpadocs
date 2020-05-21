@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Python Basics - TPASYSTEMS</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Python Basics", url: "#_top", children: [
+              {title: "Strings", url: "#strings" },
+              {title: "Variables", url: "#variables" },
+              {title: "Math", url: "#math" },
+              {title: "Logic", url: "#logic" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script>
+      <script src="../search/main.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../list_dictionaries/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../list_dictionaries/" class="btn btn-xs btn-link">
+        Lists & Dictionaries
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../architecture/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../architecture/" class="btn btn-xs btn-link">
+        Architecture
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="python-basics">Python Basics</h1>
+<h2 id="strings">Strings</h2>
+<h3 id="string-input">String Input</h3>
+<p>Using the input function with strings.</p>
+<pre><code class="python">name = input('What is your name? ')
+age = input('What is your age? ')
+location = input('Where are you from? ')
+
+&gt;&gt;&gt;print('Hello', name , 'how are you doing today? You are', age , 'today and based in the', location)
+</code></pre>
+
+<h3 id="formatting-strings-using-the-format-method">Formatting Strings using the format() method</h3>
+<p>The term {1:d} means variable 1 (40) and that its an integer. {0:s} first and a string.</p>
+<pre><code class="python">print('Hey {0:s}. You are {1:d} today. How is it in {2:s}?'.format('Ash',40,'Gower'))
+print('Hey {0:s}. You are {1:s} today. How is it in {2:s}?'.format(name,age,location))
+</code></pre>
+
+<h2 id="variables">Variables</h2>
+<pre><code class="python">a = 1
+_a = 'woop'
+</code></pre>
+
+<p>To find the location in memory of a variable</p>
+<pre><code class="python">id(a)
+</code></pre>
+
+<p>Shows what variables are in the interactive interpreter</p>
+<pre><code class="python">dir()
+</code></pre>
+
+<h2 id="math">Math</h2>
+<h3 id="math-operators">Math Operators</h3>
+<pre><code class="python">+ addition
+- subtraction
+* multiplication
+/ division
+// floor division
+% modulus
+** exponent
+</code></pre>
+
+<h3 id="variable">Variable</h3>
+<pre><code class="python">x = 5
+y = 2
+</code></pre>
+
+<h3 id="addition">Addition</h3>
+<pre><code class="python">x + y
+</code></pre>
+
+<h3 id="subtraction">Subtraction</h3>
+<pre><code class="python">x - y
+</code></pre>
+
+<h3 id="multiplication">Multiplication</h3>
+<pre><code class="python">x*y
+</code></pre>
+
+<h3 id="division">Division</h3>
+<pre><code class="python">x/y
+</code></pre>
+
+<h3 id="floor-division-rounds-down-the-anser-to-the-nearest-whole">Floor Division (rounds down the anser to the nearest whole)</h3>
+<pre><code class="python">x//y
+</code></pre>
+
+<h3 id="modulus">Modulus</h3>
+<p>Gives the remainder when 5 is divided by 2) (Modulo isn’t division, but returns the remainder after performing division.</p>
+<pre><code class="python">x%y 
+</code></pre>
+
+<h3 id="exponent-5-to-the-power-of-2">Exponent (5 to the power of 2)</h3>
+<pre><code class="python">x**y
+</code></pre>
+
+<h2 id="logic">Logic</h2>
+<h3 id="not-equal">Not equal:</h3>
+<pre><code class="python">5 != 2
+</code></pre>
+
+<h3 id="greater-than">Greater than:</h3>
+<pre><code class="python">5&gt;2
+</code></pre>
+
+<h3 id="smaller-than">Smaller than:</h3>
+<pre><code class="python">2&lt;5
+</code></pre>
+
+<h3 id="greater-than-or-equal-to">Greater than or equal to:</h3>
+<pre><code class="python">5&gt;=2 5&gt;=5
+2 &lt;= 5
+2 &lt;= 2
+</code></pre>
+
+<h3 id="if-statement">IF Statement</h3>
+<pre><code class="python">userInput = input('How old are you? ')
+
+if userInput &gt;= 18:
+    print('You may proceed adult')
+elif userInput &lt; '18':
+    print('Sorry you are under the legal age')
+else:
+    print('We need to know your age before proceeding')
+</code></pre>
+
+<h3 id="for-loop">For Loop</h3>
+<p>For loop executes a block of code repeatedly until the condition in the for statement is no longer valid. String, list, tuple or dictionary can be looped.</p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../list_dictionaries/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../list_dictionaries/" class="btn btn-xs btn-link">
+        Lists & Dictionaries
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../architecture/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../architecture/" class="btn btn-xs btn-link">
+        Architecture
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+</footer>
+
+</body>
+</html>

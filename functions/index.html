@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Functions - TPASYSTEMS</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Functions", url: "#_top", children: [
+              {title: "Global Variable Function", url: "#global-variable-function" },
+              {title: "Divider Function", url: "#divider-function" },
+              {title: "Number Function", url: "#number-function" },
+              {title: "Using Lists with Functions (Positional Parameters)", url: "#using-lists-with-functions-positional-parameters" },
+              {title: "Using Dictionaries with Functions (Keyword Parameters)", url: "#using-dictionaries-with-functions-keyword-parameters" },
+              {title: "User Number", url: "#user-number" },
+          ]},
+          {title: "Ask user the number", url: "#ask-user-the-number", children: [
+              {title: "Function to convert the users number", url: "#function-to-convert-the-users-number" },
+              {title: "To return multiple values you seperate with a comma", url: "#to-return-multiple-values-you-seperate-with-a-comma" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script>
+      <script src="../search/main.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../css/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../css/" class="btn btn-xs btn-link">
+        CSS
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../list_dictionaries/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../list_dictionaries/" class="btn btn-xs btn-link">
+        Lists & Dictionaries
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="functions">Functions</h1>
+<p>Indentations are either 2 spaces, 4 spaces or tab. Use any just be consistent.</p>
+<pre><code class="python">user = 'Gary'
+</code></pre>
+
+<pre><code class="python">def welcome(user):
+    print('Hello', user)
+    print('Hope you are well')
+
+welcome(user)
+
+print('Hey')
+</code></pre>
+
+<h3 id="global-variable-function">Global Variable Function</h3>
+<pre><code class="python">name = 'Marselle'
+
+def welcome2():
+    print('Hello super user', name)
+
+welcome2()
+</code></pre>
+
+<h3 id="divider-function">Divider Function</h3>
+<pre><code class="python">def divider(symbol):
+    print(symbol * 79)
+
+divider('-')
+</code></pre>
+
+<h3 id="number-function">Number Function</h3>
+<pre><code class="python">num_var = input('What number do you want to divide? ')
+
+def div_two(num_var):
+    return int(num_var)/2
+
+print('And our lucky number is: ', div_two(num_var))
+</code></pre>
+
+<h3 id="using-lists-with-functions-positional-parameters">Using Lists with Functions (Positional Parameters)</h3>
+<p>These need to represent the list order as this is positional parameters</p>
+<pre><code class="python">def sshNodes(p1, p2, p3, p4): 
+</code></pre>
+
+<pre><code class="python">    print('Connection Name: ', p1)
+    print('IP Address:', p2)
+    print('Username:', p3)
+    print('Password:', p4)
+</code></pre>
+
+<pre><code class="python">user1List = ['R2901A', '192.168.50.1', 'ajoyner', 'london']
+user2List = ['S3750B', '192.168.50.64', 'automation', 'london']
+
+sshNodes(*user2List)
+</code></pre>
+
+<h3 id="using-dictionaries-with-functions-keyword-parameters">Using Dictionaries with Functions (Keyword Parameters)</h3>
+<p>These don't need to be in order as this is keyword not positional parameter</p>
+<pre><code class="python">def sshNodes2(node, ipaddr, username, password): 
+    print('Connection Name: ', node)
+    print('IP Address:', ipaddr)
+    print('Username:', username)
+    print('Password:', password)
+
+user5list = {
+    'node' : 'A5501A',
+    'ipaddr' : '192.168.125.16',
+    'username' : 'movermars',
+    'password' : 'london',
+}
+
+sshNodes2(**user5list)
+</code></pre>
+
+<h2 id="user-number">User Number</h2>
+<h1 id="ask-user-the-number">Ask user the number</h1>
+<pre><code class="python">number100 = input(&quot;What's ya number? &quot;)
+</code></pre>
+
+<h3 id="function-to-convert-the-users-number">Function to convert the users number</h3>
+<pre><code class="python">def multiply100(number100):
+    return int(number100)*100
+</code></pre>
+
+<p>Print variable</p>
+<pre><code class="python">print(multiply100(number100))
+</code></pre>
+
+<h3 id="to-return-multiple-values-you-seperate-with-a-comma">To return multiple values you seperate with a comma</h3>
+<pre><code class="python">def get_boundaries(target, margin):
+  low_limit = target - margin
+  high_limit = margin + target
+  return(low_limit, high_limit)
+
+low, high = get_boundaries(100, 20)
+
+print(low)
+print(high)
+</code></pre>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../css/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../css/" class="btn btn-xs btn-link">
+        CSS
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../list_dictionaries/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../list_dictionaries/" class="btn btn-xs btn-link">
+        Lists & Dictionaries
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+</footer>
+
+</body>
+</html>
