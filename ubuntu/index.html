@@ -27,8 +27,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -618,16 +618,19 @@
 <h2 id="error-temporary-failure-resolving-archiveubuntucom">Error: Temporary failure resolving 'archive.ubuntu.com'</h2>
 <p>This means the repos can't resolve DNS.</p>
 <h3 id="temp-add-nameserver">Temp add nameserver</h3>
-<pre><code class="bash">echo &quot;nameserver 8.8.8.8&quot; | sudo tee /etc/resolv.conf &gt; /dev/null
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nb">echo</span> <span class="s2">&quot;nameserver 8.8.8.8&quot;</span> <span class="p">|</span> sudo tee /etc/resolv.conf &gt; /dev/null
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="then-do-another-update">Then do another update</h3>
-<pre><code>sudo apt update
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">sudo apt update</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="if-this-sorts-the-problem-permanently-add-the-nameserver">If this sorts the problem, permanently add the nameserver</h3>
-<pre><code class="bash">echo &quot;nameserver 8.8.8.8&quot; | sudo tee /etc/resolvconf/resolv.conf.d/base &gt; /dev/null
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nb">echo</span> <span class="s2">&quot;nameserver 8.8.8.8&quot;</span> <span class="p">|</span> sudo tee /etc/resolvconf/resolv.conf.d/base &gt; /dev/null
+</code></pre></div>
+</td></tr></table>
                 
               
               

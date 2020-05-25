@@ -27,8 +27,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -714,54 +714,73 @@
 Install and create username.</p>
 <h3 id="check-versions">Check Versions</h3>
 <p>To see what the default distro is </p>
-<pre><code>wsl -l
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">wsl -l</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>Output:</p>
-<pre><code>PS C:\Users\ashle&gt; wsl -l
-Windows Subsystem for Linux Distributions:
-Ubuntu-18.04 (Default)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">PS C:\Users\ashle&gt; wsl -l</span>
+<span class="err">Windows Subsystem for Linux Distributions:</span>
+<span class="err">Ubuntu-18.04 (Default)</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>To check which version of WSL each distro is using and if it is running. Open powershell.</p>
-<pre><code>wsl -l -v
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">wsl -l -v</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>Output:</p>
-<pre><code>PS C:\Users\ashle&gt; wsl -l -v
-  NAME            STATE           VERSION
-* Ubuntu-18.04    Running         1
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">PS C:\Users\ashle&gt; wsl -l -v</span>
+<span class="err">  NAME            STATE           VERSION</span>
+<span class="err">* Ubuntu-18.04    Running         1</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="set-wsl2-as-default">Set WSL2 as default</h3>
 <p>In powershell run the following.</p>
-<pre><code>wsl --set-default-version 2
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">wsl --set-default-version 2</span>
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="operations">Operations</h2>
 <h3 id="open-file-from-explorer">Open file from explorer</h3>
 <p>Put the following in the browser to access files from within WSL.</p>
-<pre><code>\\wsl$\[Distrobution]
-\\wsl$\Ubuntu-20.04
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">\\</span><span class="n">wsl</span><span class="err">$\</span><span class="o">[</span><span class="n">Distrobution</span><span class="o">]</span><span class="w"></span>
+<span class="err">\\</span><span class="n">wsl</span><span class="err">$\</span><span class="n">Ubuntu</span><span class="o">-</span><span class="mf">20.04</span><span class="w"></span>
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="troubleshooting">Troubleshooting</h2>
 <h3 id="kernel-upgrade">Kernel Upgrade</h3>
 <p>If you recieve this error</p>
-<pre><code>PS C:\Users\ashle&gt; wsl --set-version Ubuntu-20.04 2
-Conversion in progress, this may take a few minutes...
-WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">PS C:\Users\ashle&gt; wsl --set-version Ubuntu-20.04 2</span>
+<span class="err">Conversion in progress, this may take a few minutes...</span>
+<span class="err">WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>You need to download a small kernal upgrade from the link above.</p>
 <h3 id="switch-on-virtual-machine-platform">Switch on Virtual Machine Platform</h3>
 <p>If you get:</p>
-<pre><code>PS C:\Users\ashle&gt; wsl --set-version Ubuntu-18.04 2
-Conversion in progress, this may take a few minutes...
-For information on key differences with WSL 2 please visit https://aka.ms/wsl2
-Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS.
-For information please visit https://aka.ms/wsl2-install
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">PS C:\Users\ashle&gt; wsl --set-version Ubuntu-18.04 2</span>
+<span class="err">Conversion in progress, this may take a few minutes...</span>
+<span class="err">For information on key differences with WSL 2 please visit https://aka.ms/wsl2</span>
+<span class="err">Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS.</span>
+<span class="err">For information please visit https://aka.ms/wsl2-install</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>Go into windows and features and tick Virtual Machine Platform. It wasn't ticked after upgrading to WSL2.</p>
 <h2 id="useful-links">Useful Links</h2>

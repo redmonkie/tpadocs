@@ -27,8 +27,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -766,152 +766,223 @@
                 
                 <h1 id="javascript">Javascript</h1>
 <h2 id="multiline-comment">Multiline Comment</h2>
-<pre><code class="js">/* This is a 
-multiline comment.
-Thank you
-Goodnight */
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cm">/* This is a </span>
+<span class="cm">multiline comment.</span>
+<span class="cm">Thank you</span>
+<span class="cm">Goodnight */</span>
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="type-of">Type of</h2>
 <p>Shows you what datatype is in the brackets. </p>
-<pre><code class="js">typeof(23);
-typeof(&quot;Ash&quot;);
-typeof(true)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">typeof</span><span class="p">(</span><span class="mi">23</span><span class="p">);</span>
+<span class="k">typeof</span><span class="p">(</span><span class="s2">&quot;Ash&quot;</span><span class="p">);</span>
+<span class="k">typeof</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="prompt-input">Prompt (Input)</h2>
 <p>To ask the user for a value</p>
-<pre><code class="js">var dogAge = prompt(&quot;What is your dogs age?&quot;);
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">dogAge</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;What is your dogs age?&quot;</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="string-concatination">String Concatination</h2>
 <p>Make sure you put spaces between varaibles and <code>+</code> f</p>
-<pre><code class="js">var message = &quot;Hello&quot;;
-var name = &quot;Marselle&quot;;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Marselle&quot;</span><span class="p">;</span>
 
-alert(message + name);
-</code></pre>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">message</span> <span class="o">+</span> <span class="nx">name</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="variables">Variables</h2>
 <p>If you want to change the varable you only need to use the 'var' once after the container is created.</p>
-<pre><code class="js">var myName = &quot;Marselle&quot;; 
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">myName</span> <span class="o">=</span> <span class="s2">&quot;Marselle&quot;</span><span class="p">;</span> 
+</code></pre></div>
+</td></tr></table>
 
 <p>Prompts user for input</p>
-<pre><code class="js">var yourName = prompt(&quot;What is your name?&quot;);
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">yourName</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>Pops out an alert with the variable of myName</p>
-<pre><code class="js">alert(&quot;My name is &quot; + myName + &quot;. Welcome to my site &quot; + yourName); 
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;My name is &quot;</span> <span class="o">+</span> <span class="nx">myName</span> <span class="o">+</span> <span class="s2">&quot;. Welcome to my site &quot;</span> <span class="o">+</span> <span class="nx">yourName</span><span class="p">);</span> 
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="string-lengthnumber-retrival">String Length/Number Retrival</h2>
 <p>Below is code I made to ask a message, display how many characters are in the message and work out the remaining characters if 280 is max.</p>
-<pre><code class="js">// Prompt that feeds into variable.
-var message = prompt(&quot;Whats your beef?&quot;);
-// Variable that works out remainder
-var remainder = 280 - message.length
-// Display message
-alert(&quot;You have written &quot; + message.length + &quot; characters, you have &quot; + remainder + &quot; left.&quot;);
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">// Prompt that feeds into variable.</span>
+<span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Whats your beef?&quot;</span><span class="p">);</span>
+<span class="c1">// Variable that works out remainder</span>
+<span class="kd">var</span> <span class="nx">remainder</span> <span class="o">=</span> <span class="mi">280</span> <span class="o">-</span> <span class="nx">message</span><span class="p">.</span><span class="nx">length</span>
+<span class="c1">// Display message</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You have written &quot;</span> <span class="o">+</span> <span class="nx">message</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="s2">&quot; characters, you have &quot;</span> <span class="o">+</span> <span class="nx">remainder</span> <span class="o">+</span> <span class="s2">&quot; left.&quot;</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>It can also be written simpler by doing the <code>maths</code> within the alert using <code>()</code>.</p>
-<pre><code class="js">var message = prompt(&quot;Whats your beef?&quot;);
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Whats your beef?&quot;</span><span class="p">);</span>
 
-alert(&quot;You have written &quot; + message.length + &quot; characters, you have &quot; + (280 - message.length) + &quot; left.&quot;);
-</code></pre>
+<span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You have written &quot;</span> <span class="o">+</span> <span class="nx">message</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="s2">&quot; characters, you have &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="mi">280</span> <span class="o">-</span> <span class="nx">message</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; left.&quot;</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="string-slicing">String Slicing</h3>
 <p>Using the <code>slice()</code> method you can specify what part of a string you want to include. <em>Starts at 0</em>.</p>
-<pre><code class="js">var name = &quot;Marselle&quot;
-name.slice(2,3)
-&gt; &quot;r&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Marselle&quot;</span>
+<span class="nx">name</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="s2">&quot;r&quot;</span>
 
-// Range (Start at 3 up to but not including 7)
-name.slice(3,7)
-&gt; &quot;sell&quot;
-</code></pre>
+<span class="c1">// Range (Start at 3 up to but not including 7)</span>
+<span class="nx">name</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="s2">&quot;sell&quot;</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>Below will slice the output to be maximum of 140 characters</p>
-<pre><code class="js">var message = prompt(&quot;Whats your beef?&quot;);
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Whats your beef?&quot;</span><span class="p">);</span>
 
-var message = message.slice(0,140)
+<span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">message</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">140</span><span class="p">)</span>
 
-alert(message);
-</code></pre>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>Single line version of above which will:<br />
 1. Prompt<br />
 2. Slice<br />
 3. Alert  </p>
-<pre><code class="js">alert(prompt(&quot;Whats your beef?&quot;).slice(0,140));
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nx">alert</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Whats your beef?&quot;</span><span class="p">).</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">140</span><span class="p">));</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="change-string-case">Change String Case</h3>
-<pre><code class="js">var name = &quot;Marselle&quot;
-name = name.toUpperCase();
-&gt; &quot;MARSELLE&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Marselle&quot;</span>
+<span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
+<span class="o">&gt;</span> <span class="s2">&quot;MARSELLE&quot;</span>
 
-var name = &quot;Marselle&quot;
-name = name.toLowerCase();
-&gt; &quot;marselle&quot;
-</code></pre>
+<span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Marselle&quot;</span>
+<span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">();</span>
+<span class="o">&gt;</span> <span class="s2">&quot;marselle&quot;</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="string-case-and-slice">String Case and Slice</h3>
 <p>By using slice we can isolate which part of the variable we make upper case and whats lower case.<br />
 Also as we don't know the length of the users name by starting the slice at <code>1</code> and then using the <code>.length</code> method we say make the second character and then the <em>length</em> of the variable lower case.</p>
-<pre><code class="js">var name = prompt(&quot;What is your name?&quot;);
-alert(name.slice(0,1).toUpperCase() + name.slice(1,name.length).toLowerCase());
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">);</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">name</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">).</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="o">+</span> <span class="nx">name</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nx">name</span><span class="p">.</span><span class="nx">length</span><span class="p">).</span><span class="nx">toLowerCase</span><span class="p">());</span>
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="maths">Maths</h2>
 <p>Look at <a href="../py_basics/#Math Operators">Python Maths</a> for all mathmatical syntaxs.</p>
 <p>There's an order of presendence. <code>*</code>, <code>%</code> before <code>+</code>, <code>-</code>.<br />
 5 <code>*</code> 2 would come before 3 <code>+</code> 5</p>
-<pre><code class="javascript">var cost = 3 + 5 * 2
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">cost</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">2</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>If you wanted 3 <code>+</code> 5 to come first you would encase it in brackets.</p>
-<pre><code class="js">var cost = (3+5) * 2
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">cost</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>It's good practice to add the parenthesis even though you know the multiplication or divison is happening first.</p>
-<pre><code class="js">var cost = 3 + (5 * 2)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">cost</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="incrementdecrement">Increment/Decrement</h3>
 <p>To increase a value use <code>+=</code> &amp; <code>*=</code>. To decrease a value use <code>-=</code> &amp; <code>/=</code>.</p>
-<pre><code class="js">var x = 7;
-var y = 10;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 
-x += 2;
-&gt; 9
+<span class="nx">x</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="o">&gt;</span> <span class="mi">9</span>
 
-y -= 6;
-&gt; 4
-</code></pre>
+<span class="nx">y</span> <span class="o">-=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="o">&gt;</span> <span class="mi">4</span>
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="functions">Functions</h2>
 <p>Functions is basically zipping up code that you reuse. </p>
-<pre><code class="js">// Create Function
-function funcName() {
-    alert(&quot;Hello&quot;);
-    alert(&quot;World&quot;);
-}
-// Call Function
-funcName();
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">// Create Function</span>
+<span class="kd">function</span> <span class="nx">funcName</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">);</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;World&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// Call Function</span>
+<span class="nx">funcName</span><span class="p">();</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="passing-into-a-function">Passing Into a Function</h3>
 <p>Like python, it's in order. The <code>return</code> is what gives this function an output.</p>
-<pre><code class="js">function box(number1, number2) {
-    return number1 * number2;
-}
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">function</span> <span class="nx">box</span><span class="p">(</span><span class="nx">number1</span><span class="p">,</span> <span class="nx">number2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">number1</span> <span class="o">*</span> <span class="nx">number2</span><span class="p">;</span>
+<span class="p">}</span>
 
-box(5, 4);
+<span class="nx">box</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
 
-&gt; 20
-</code></pre>
+<span class="o">&gt;</span> <span class="mi">20</span>
+</code></pre></div>
+</td></tr></table>
                 
               
               

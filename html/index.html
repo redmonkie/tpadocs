@@ -27,8 +27,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -673,24 +673,35 @@
                 <h1 id="html">HTML</h1>
 <h2 id="anchor">Anchor</h2>
 <p>The <code>./</code> in <code>./contact.html</code> tells the browser to look for the file in the current folder. </p>
-<pre><code class="html">&lt;a href=&quot;./contact.html&quot;&gt;Contact Us&lt;/a&gt;
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./contact.html&quot;</span><span class="p">&gt;</span>Contact Us<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="tables">Tables</h2>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Table_content">Mozilla Table content</a></p>
 <h3 id="table-headings">Table Headings</h3>
 <p>Table headings <code>th</code> defines a cell as header of a group of table cells. The exact nature of this group is defined by the scope and headers attributes..</p>
-<pre><code class="html">    &lt;tr&gt;
-      &lt;th&gt;Company Name&lt;/th&gt;
-      &lt;th&gt;Number of Items to Ship&lt;/th&gt;
-      &lt;th&gt;Next Action&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Adam's Greenworks&lt;/td&gt;
-      &lt;td&gt;14&lt;/td&gt;
-      &lt;td&gt;Package Items&lt;/td&gt;
-    &lt;/tr&gt;
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Company Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Number of Items to Ship<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Next Action<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Adam&#39;s Greenworks<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>14<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Package Items<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="scope">Scope</h3>
 <p><code>scope</code> attribute within <code>&lt;td&gt;</code> specifies:  </p>
@@ -699,66 +710,106 @@
 <li>col - this value makes it clear that the heading is for a column.</li>
 </ul>
 <p>WHATS THE DIFFERENCE? (This is different from <code>thead</code>)</p>
-<pre><code class="html">&lt;tr&gt;
-    &lt;th&gt;&lt;/th&gt;
-    &lt;th scope=&quot;col&quot;&gt;Saturday&lt;/th&gt;
-    &lt;th scope=&quot;col&quot;&gt;Sunday&lt;/th&gt;
-  &lt;/tr&gt;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>Saturday<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>Sunday<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 
-  &lt;tr&gt;
-    &lt;th scope=&quot;row&quot;&gt;Temperature&lt;/th&gt;
-    &lt;td&gt;73&lt;/td&gt;
-    &lt;td&gt;81&lt;/td&gt;
-  &lt;/tr&gt;
-</code></pre>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>Temperature<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>73<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>81<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="spanning">Spanning</h3>
 <p>Span columns with <code>colspan</code></p>
-<pre><code class="html">&lt;tr&gt;
-  &lt;td&gt;Strike Fitness&lt;/td&gt;
-  &lt;td colspan=&quot;2&quot;&gt;1&lt;/td&gt;
-  &lt;td&gt;Enter Order&lt;/td&gt;
-&lt;/tr&gt;
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Strike Fitness<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Enter Order<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>Spand rows with <code>rowspan</code></p>
-<pre><code class="html">  &lt;tr&gt;
-    &lt;th&gt;Morning&lt;/th&gt;
-    &lt;td rowspan=&quot;2&quot;&gt;Work&lt;/td&gt;
-    &lt;td rowspan=&quot;3&quot;&gt;Relax&lt;/td&gt;
-  &lt;/tr&gt;
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Morning<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">rowspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>Work<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">rowspan</span><span class="o">=</span><span class="s">&quot;3&quot;</span><span class="p">&gt;</span>Relax<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="table-head">Table Head</h3>
 <p>Doesn't do anything visually just easier to read code.</p>
-<pre><code class="html">    &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Company Name&lt;/th&gt;
-      &lt;th&gt;Number of Items to Ship&lt;/th&gt;
-      &lt;th&gt;Next Action&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;/thead&gt;
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Company Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Number of Items to Ship<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Next Action<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="table-body">Table Body</h3>
 <p>Just put the content inside of the table body. More for sectioning but won't directly effect the table.</p>
-<pre><code class="html">&lt;tbody&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Work&lt;/td&gt;
-        &lt;td&gt;Relax&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/tbody&gt;
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Work<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Relax<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="table-footer">Table Footer</h3>
 <p>Same as above.</p>
-<pre><code class="html">&lt;tfoot&gt;
-&lt;tr&gt;
-  &lt;td&gt;Total&lt;/td&gt;
-  &lt;td&gt;28&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tfoot&gt;
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">tfoot</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Total<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>28<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">tfoot</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
                 
               
               

@@ -27,8 +27,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -514,6 +514,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    Text
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icons" class="md-nav__link">
+    Icons
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#shortcuts" class="md-nav__link">
     Shortcuts
   </a>
@@ -578,6 +592,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    Text
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icons" class="md-nav__link">
+    Icons
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#shortcuts" class="md-nav__link">
     Shortcuts
   </a>
@@ -603,19 +631,43 @@
                 <h1 id="adobe-xd">Adobe XD</h1>
 <p>Adobe XD is a vector-based user experience design tool for web apps and mobile apps.</p>
 <h2 id="website-layout">Website Layout</h2>
-<p>When starting a new design best to use the dimensions of <code>W: 1400</code> &amp; <code>H: 800</code>.  </p>
+<p>When starting a new design best to use the dimensions of <code>W: 1400</code> &amp; <code>H: 800</code>. <em>(This is not always the case. Read below)</em><br />
+ - You can use 1920 width but set internal boundaries to be narrower.<br />
+ - Depending on the target audience choose a size for the site using the grid on <a href="https://www.w3schools.com/browsers/browsers_display.asp">Browser Display Statistics</a>.<br />
+ - If a website already exists maybe have a look at google analytics (If they have it) to see the users screen res. (Audience &gt; Technology &gt; Browser &amp; OS)</p>
+<p>### Viewport Height
+ If the screen res of your display is 1920 x 1080 a website wont take all that up so setting the <code>Viewport Height</code> will create a line to what the user will see in a browser before the have to scroll down.</p>
 <h3 id="grid">Grid</h3>
 <p>This gives you some margins to keep everything within the middle of the page.
 Use the parameters below</p>
-<pre><code>Grid: Layout
-Colums: 2
-Gutter Width: 1140
-Column Width: 130
-Margins Linked: 0
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">Grid</span><span class="o">:</span> <span class="n">Layout</span>
+<span class="n">Colums</span><span class="o">:</span> <span class="mi">2</span>
+<span class="n">Gutter</span> <span class="n">Width</span><span class="o">:</span> <span class="mi">1140</span>
+<span class="n">Column</span> <span class="n">Width</span><span class="o">:</span> <span class="mi">130</span>
+<span class="n">Margins</span> <span class="n">Linked</span><span class="o">:</span> <span class="mi">0</span>
+</code></pre></div>
+</td></tr></table>
 
+<h2 id="text">Text</h2>
+<p>Stick to 2-3 different font sizes for consistency. Like 10, 16, 24.</p>
+<h2 id="icons">Icons</h2>
+<ul>
+<li>SVG have multiple parts. You can literally pick it apart. If you have <code>Responsive Resize</code> enabled, resizing can be obsecured. Untick it.  </li>
+<li>Hold <code>Shift</code> when resizing to avoid distortion.</li>
+</ul>
 <h2 id="shortcuts">Shortcuts</h2>
-<p><code>Ctrl + Z</code> undo.</p>
+<p><code>Ctrl + Z</code> undo.<br />
+<code>Ctrl</code> + <code>+</code> zoom in.<br />
+<code>Ctrl</code> + <code>-</code> zoom out.<br />
+<code>Space Bar + drag mouse</code> to move canvas around.<br />
+<code>Ctrl + 0</code> zoom right out.<br />
+<code>Ctrl + 3</code> zooms to highlighted section.<br />
+<code>Ctrl + Shift + '</code> turn grid on or off.
+<code>Alt + drag selection</code> sizes boths sides and keeps aspect ratio.</p>
                 
               
               

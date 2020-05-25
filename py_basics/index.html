@@ -27,8 +27,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -880,106 +880,147 @@
 <h2 id="strings">Strings</h2>
 <h3 id="string-input">String Input</h3>
 <p>Using the input function with strings.</p>
-<pre><code class="python">name = input('What is your name? ')
-age = input('What is your age? ')
-location = input('Where are you from? ')
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name? &#39;</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your age? &#39;</span><span class="p">)</span>
+<span class="n">location</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Where are you from? &#39;</span><span class="p">)</span>
 
-&gt;&gt;&gt;print('Hello', name , 'how are you doing today? You are', age , 'today and based in the', location)
-</code></pre>
+<span class="o">&gt;&gt;&gt;</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="n">name</span> <span class="p">,</span> <span class="s1">&#39;how are you doing today? You are&#39;</span><span class="p">,</span> <span class="n">age</span> <span class="p">,</span> <span class="s1">&#39;today and based in the&#39;</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="formatting-strings-using-the-format-method">Formatting Strings using the format() method</h3>
 <p>The term {1:d} means variable 1 (40) and that its an integer. {0:s} first and a string.</p>
-<pre><code class="python">print('Hey {0:s}. You are {1:d} today. How is it in {2:s}?'.format('Ash',40,'Gower'))
-print('Hey {0:s}. You are {1:s} today. How is it in {2:s}?'.format(name,age,location))
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hey </span><span class="si">{0:s}</span><span class="s1">. You are </span><span class="si">{1:d}</span><span class="s1"> today. How is it in </span><span class="si">{2:s}</span><span class="s1">?&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Ash&#39;</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="s1">&#39;Gower&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hey </span><span class="si">{0:s}</span><span class="s1">. You are </span><span class="si">{1:s}</span><span class="s1"> today. How is it in </span><span class="si">{2:s}</span><span class="s1">?&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">location</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="variables">Variables</h2>
-<pre><code class="python">a = 1
-_a = 'woop'
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">_a</span> <span class="o">=</span> <span class="s1">&#39;woop&#39;</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>To find the location in memory of a variable</p>
-<pre><code class="python">id(a)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>Shows what variables are in the interactive interpreter</p>
-<pre><code class="python">dir()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nb">dir</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="math">Math</h2>
 <h3 id="math-operators">Math Operators</h3>
-<pre><code class="python">+ addition
-- subtraction
-* multiplication
-/ division
-// floor division
-% modulus
-** exponent
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="o">+</span> <span class="n">addition</span>
+<span class="o">-</span> <span class="n">subtraction</span>
+<span class="o">*</span> <span class="n">multiplication</span>
+<span class="o">/</span> <span class="n">division</span>
+<span class="o">//</span> <span class="n">floor</span> <span class="n">division</span>
+<span class="o">%</span> <span class="n">modulus</span>
+<span class="o">**</span> <span class="n">exponent</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="variable">Variable</h3>
-<pre><code class="python">x = 5
-y = 2
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="addition">Addition</h3>
-<pre><code class="python">x + y
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="subtraction">Subtraction</h3>
-<pre><code class="python">x - y
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="multiplication">Multiplication</h3>
-<pre><code class="python">x*y
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">x</span><span class="o">*</span><span class="n">y</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="division">Division</h3>
-<pre><code class="python">x/y
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">x</span><span class="o">/</span><span class="n">y</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="floor-division-rounds-down-the-anser-to-the-nearest-whole">Floor Division (rounds down the anser to the nearest whole)</h3>
-<pre><code class="python">x//y
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">x</span><span class="o">//</span><span class="n">y</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="modulus">Modulus</h3>
 <p>Gives the remainder when 5 is divided by 2) (Modulo isn’t division, but returns the remainder after performing division.</p>
-<pre><code class="python">x%y 
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">x</span><span class="o">%</span><span class="n">y</span> 
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="exponent-5-to-the-power-of-2">Exponent (5 to the power of 2)</h3>
-<pre><code class="python">x**y
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">x</span><span class="o">**</span><span class="n">y</span>
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="logic">Logic</h2>
 <h3 id="not-equal">Not equal:</h3>
-<pre><code class="python">5 != 2
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="mi">5</span> <span class="o">!=</span> <span class="mi">2</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="greater-than">Greater than:</h3>
-<pre><code class="python">5&gt;2
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="mi">5</span><span class="o">&gt;</span><span class="mi">2</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="smaller-than">Smaller than:</h3>
-<pre><code class="python">2&lt;5
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="mi">2</span><span class="o">&lt;</span><span class="mi">5</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="greater-than-or-equal-to">Greater than or equal to:</h3>
-<pre><code class="python">5&gt;=2 5&gt;=5
-2 &lt;= 5
-2 &lt;= 2
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="mi">5</span><span class="o">&gt;=</span><span class="mi">2</span> <span class="mi">5</span><span class="o">&gt;=</span><span class="mi">5</span>
+<span class="mi">2</span> <span class="o">&lt;=</span> <span class="mi">5</span>
+<span class="mi">2</span> <span class="o">&lt;=</span> <span class="mi">2</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="if-statement">IF Statement</h3>
-<pre><code class="python">userInput = input('How old are you? ')
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">userInput</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you? &#39;</span><span class="p">)</span>
 
-if userInput &gt;= 18:
-    print('You may proceed adult')
-elif userInput &lt; '18':
-    print('Sorry you are under the legal age')
-else:
-    print('We need to know your age before proceeding')
-</code></pre>
+<span class="k">if</span> <span class="n">userInput</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You may proceed adult&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">userInput</span> <span class="o">&lt;</span> <span class="s1">&#39;18&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sorry you are under the legal age&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We need to know your age before proceeding&#39;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="for-loop">For Loop</h3>
 <p>For loop executes a block of code repeatedly until the condition in the for statement is no longer valid. String, list, tuple or dictionary can be looped.</p>

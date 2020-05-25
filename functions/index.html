@@ -27,8 +27,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -632,103 +632,163 @@
                 
                 <h1 id="functions">Functions</h1>
 <p>Indentations are either 2 spaces, 4 spaces or tab. Use any just be consistent.</p>
-<pre><code class="python">user = 'Gary'
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">user</span> <span class="o">=</span> <span class="s1">&#39;Gary&#39;</span>
+</code></pre></div>
+</td></tr></table>
 
-<pre><code class="python">def welcome(user):
-    print('Hello', user)
-    print('Hope you are well')
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">welcome</span><span class="p">(</span><span class="n">user</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hope you are well&#39;</span><span class="p">)</span>
 
-welcome(user)
+<span class="n">welcome</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
 
-print('Hey')
-</code></pre>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hey&#39;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="global-variable-function">Global Variable Function</h3>
-<pre><code class="python">name = 'Marselle'
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Marselle&#39;</span>
 
-def welcome2():
-    print('Hello super user', name)
+<span class="k">def</span> <span class="nf">welcome2</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello super user&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 
-welcome2()
-</code></pre>
+<span class="n">welcome2</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="divider-function">Divider Function</h3>
-<pre><code class="python">def divider(symbol):
-    print(symbol * 79)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">divider</span><span class="p">(</span><span class="n">symbol</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">symbol</span> <span class="o">*</span> <span class="mi">79</span><span class="p">)</span>
 
-divider('-')
-</code></pre>
+<span class="n">divider</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="number-function">Number Function</h3>
-<pre><code class="python">num_var = input('What number do you want to divide? ')
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">num_var</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What number do you want to divide? &#39;</span><span class="p">)</span>
 
-def div_two(num_var):
-    return int(num_var)/2
+<span class="k">def</span> <span class="nf">div_two</span><span class="p">(</span><span class="n">num_var</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_var</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
 
-print('And our lucky number is: ', div_two(num_var))
-</code></pre>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;And our lucky number is: &#39;</span><span class="p">,</span> <span class="n">div_two</span><span class="p">(</span><span class="n">num_var</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="using-lists-with-functions-positional-parameters">Using Lists with Functions (Positional Parameters)</h3>
 <p>These need to represent the list order as this is positional parameters</p>
-<pre><code class="python">def sshNodes(p1, p2, p3, p4): 
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">sshNodes</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">,</span> <span class="n">p4</span><span class="p">):</span> 
+</code></pre></div>
+</td></tr></table>
 
-<pre><code class="python">    print('Connection Name: ', p1)
-    print('IP Address:', p2)
-    print('Username:', p3)
-    print('Password:', p4)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Connection Name: &#39;</span><span class="p">,</span> <span class="n">p1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;IP Address:&#39;</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Username:&#39;</span><span class="p">,</span> <span class="n">p3</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Password:&#39;</span><span class="p">,</span> <span class="n">p4</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 
-<pre><code class="python">user1List = ['R2901A', '192.168.50.1', 'ajoyner', 'london']
-user2List = ['S3750B', '192.168.50.64', 'automation', 'london']
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">user1List</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;R2901A&#39;</span><span class="p">,</span> <span class="s1">&#39;192.168.50.1&#39;</span><span class="p">,</span> <span class="s1">&#39;ajoyner&#39;</span><span class="p">,</span> <span class="s1">&#39;london&#39;</span><span class="p">]</span>
+<span class="n">user2List</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S3750B&#39;</span><span class="p">,</span> <span class="s1">&#39;192.168.50.64&#39;</span><span class="p">,</span> <span class="s1">&#39;automation&#39;</span><span class="p">,</span> <span class="s1">&#39;london&#39;</span><span class="p">]</span>
 
-sshNodes(*user2List)
-</code></pre>
+<span class="n">sshNodes</span><span class="p">(</span><span class="o">*</span><span class="n">user2List</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="using-dictionaries-with-functions-keyword-parameters">Using Dictionaries with Functions (Keyword Parameters)</h3>
 <p>These don't need to be in order as this is keyword not positional parameter</p>
-<pre><code class="python">def sshNodes2(node, ipaddr, username, password): 
-    print('Connection Name: ', node)
-    print('IP Address:', ipaddr)
-    print('Username:', username)
-    print('Password:', password)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">sshNodes2</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">ipaddr</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Connection Name: &#39;</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;IP Address:&#39;</span><span class="p">,</span> <span class="n">ipaddr</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Username:&#39;</span><span class="p">,</span> <span class="n">username</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Password:&#39;</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
 
-user5list = {
-    'node' : 'A5501A',
-    'ipaddr' : '192.168.125.16',
-    'username' : 'movermars',
-    'password' : 'london',
-}
+<span class="n">user5list</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;node&#39;</span> <span class="p">:</span> <span class="s1">&#39;A5501A&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ipaddr&#39;</span> <span class="p">:</span> <span class="s1">&#39;192.168.125.16&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;username&#39;</span> <span class="p">:</span> <span class="s1">&#39;movermars&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;password&#39;</span> <span class="p">:</span> <span class="s1">&#39;london&#39;</span><span class="p">,</span>
+<span class="p">}</span>
 
-sshNodes2(**user5list)
-</code></pre>
+<span class="n">sshNodes2</span><span class="p">(</span><span class="o">**</span><span class="n">user5list</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="user-number">User Number</h2>
 <h1 id="ask-user-the-number">Ask user the number</h1>
-<pre><code class="python">number100 = input(&quot;What's ya number? &quot;)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">number100</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What&#39;s ya number? &quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="function-to-convert-the-users-number">Function to convert the users number</h3>
-<pre><code class="python">def multiply100(number100):
-    return int(number100)*100
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">multiply100</span><span class="p">(</span><span class="n">number100</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">number100</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>Print variable</p>
-<pre><code class="python">print(multiply100(number100))
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">multiply100</span><span class="p">(</span><span class="n">number100</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="to-return-multiple-values-you-seperate-with-a-comma">To return multiple values you seperate with a comma</h3>
-<pre><code class="python">def get_boundaries(target, margin):
-  low_limit = target - margin
-  high_limit = margin + target
-  return(low_limit, high_limit)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_boundaries</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">margin</span><span class="p">):</span>
+  <span class="n">low_limit</span> <span class="o">=</span> <span class="n">target</span> <span class="o">-</span> <span class="n">margin</span>
+  <span class="n">high_limit</span> <span class="o">=</span> <span class="n">margin</span> <span class="o">+</span> <span class="n">target</span>
+  <span class="k">return</span><span class="p">(</span><span class="n">low_limit</span><span class="p">,</span> <span class="n">high_limit</span><span class="p">)</span>
 
-low, high = get_boundaries(100, 20)
+<span class="n">low</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="n">get_boundaries</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 
-print(low)
-print(high)
-</code></pre>
+<span class="nb">print</span><span class="p">(</span><span class="n">low</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">high</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
                 
               
               

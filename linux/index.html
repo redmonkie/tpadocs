@@ -27,8 +27,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -593,18 +593,22 @@
 <p>Notice the diffence between shell.<br />
 <br>
 root shell</p>
-<pre><code class="bash">[root@artemis ~]#
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="o">[</span>root@artemis ~<span class="o">]</span><span class="c1">#</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>Non root user</p>
-<pre><code class="bash">[ajoyner@artemis ~]$ 
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="o">[</span>ajoyner@artemis ~<span class="o">]</span>$ 
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="folder-permissions">Folder Permissions</h3>
 <p>To give permissions to a folder usually specified outside your home directory.</p>
-<pre><code class="bash">sudo chown -R &lt;user-name&gt; &lt;directory-name&gt;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>sudo chown -R &lt;user-name&gt; &lt;directory-name&gt;
 sudo chown -R ajoyner /home/ajoyner/techdocs/docs
-</code></pre>
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="useful-links">Useful Links</h2>
                 

@@ -27,8 +27,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -809,49 +809,68 @@
                 <h1 id="lists-dictionaries">Lists &amp; Dictionaries</h1>
 <h2 id="lists">Lists</h2>
 <p>They use square brackets.</p>
-<pre><code class="python">userAge = [18, 19, 22, 25, 30]
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">userAge</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="you-can-print-a-particular-value-in-a-list">You can print a particular value in a list.</h3>
-<pre><code class="python">print(userAge[1])
-19
-print(userAge[0])
-18
-print(userAge[-1])
-30
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">userAge</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="mi">19</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">userAge</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="mi">18</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">userAge</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="mi">30</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="you-can-have-empty-lists-and-fill-them-later-with-the-apend-function">You can have empty lists and fill them later with the apend() function</h3>
-<pre><code class="python">emptyList = []
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">emptyList</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="make-a-list-into-a-variable-variable-list">Make a list into a variable (variable = list)</h3>
-<pre><code class="python">userAgeV1 = userAge
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">userAgeV1</span> <span class="o">=</span> <span class="n">userAge</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="assign-index-to-a-variable-notation-24-is-known-as-a-slice">Assign index to a variable. Notation 2:4 is known as a slice.</h3>
-<pre><code class="python">userAgeV2 = userAge[2:4]
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">userAgeV2</span> <span class="o">=</span> <span class="n">userAge</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
 
-<pre><code class="python">print (userAgeV2)
-[22, 25]
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nb">print</span> <span class="p">(</span><span class="n">userAgeV2</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="the-third-number-in-the-slice-is-a-stepper-we-get-a-sublist-consisting-every-second-number">The third number in the slice is a stepper. We get a sublist consisting every second number.</h3>
-<pre><code class="python">userAgeV3 = userAge[1:5:2]
-print (userAgeV3)
-[19, 25]
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">userAgeV3</span> <span class="o">=</span> <span class="n">userAge</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">userAgeV3</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="appending-to-a-list">Appending to a list</h3>
-<pre><code class="python">router =['891','2901', '2951', '4001']
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">router</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;891&#39;</span><span class="p">,</span><span class="s1">&#39;2901&#39;</span><span class="p">,</span> <span class="s1">&#39;2951&#39;</span><span class="p">,</span> <span class="s1">&#39;4001&#39;</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="append-to-existing-list">Append to existing list</h3>
-<pre><code class="python">router.append('2950')
-#Append a list to a list
-router.append(['mx240', 'srx200']) 
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">router</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;2950&#39;</span><span class="p">)</span>
+<span class="c1">#Append a list to a list</span>
+<span class="n">router</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s1">&#39;mx240&#39;</span><span class="p">,</span> <span class="s1">&#39;srx200&#39;</span><span class="p">])</span> 
+</code></pre></div>
+</td></tr></table>
 
 <p>Slice notations have useful defaults. The default for the first number is zero, and the default for the second number is size of the list being sliced.
 For instance, <code>userAge[ :4]</code> gives you values from index <code>0</code> to index <code>4-1</code> while <code>userAge[1: ]</code> gives you values from index <code>1</code> to index <code>5-1</code> (since the size of <code>userAge</code> is 5, i.e. <code>userAge</code> has 5 items).</p>
@@ -859,43 +878,57 @@ For instance, <code>userAge[ :4]</code> gives you values from index <code>0</cod
 <p>Tuples are just like lists, but you cannot modify their values. The initial values are the values that will stay for the rest of the program.  </p>
 <p>To declare a tuple, you write <code>tupleName = (initial values)</code>. Use parentheses ( ) when declaring a tuple.</p>
 <h3 id="multiple-values-are-separated-by-a-comma">Multiple values are separated by a comma.</h3>
-<pre><code class="python">monthsOfYear = (&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;)
-print(monthsOfYear[4])
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">monthsOfYear</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Jan&quot;</span><span class="p">,</span> <span class="s2">&quot;Feb&quot;</span><span class="p">,</span> <span class="s2">&quot;Mar&quot;</span><span class="p">,</span> <span class="s2">&quot;Apr&quot;</span><span class="p">,</span> <span class="s2">&quot;May&quot;</span><span class="p">,</span> <span class="s2">&quot;Jun&quot;</span><span class="p">,</span> <span class="s2">&quot;Jul&quot;</span><span class="p">,</span> <span class="s2">&quot;Aug&quot;</span><span class="p">,</span> <span class="s2">&quot;Sep&quot;</span><span class="p">,</span> <span class="s2">&quot;Oct&quot;</span><span class="p">,</span> <span class="s2">&quot;Nov&quot;</span><span class="p">,</span> <span class="s2">&quot;Dec&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">monthsOfYear</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+</code></pre></div>
+</td></tr></table>
 
 <h2 id="dictionaries">Dictionaries</h2>
 <p>Dictionary is a collection of related data PAIRS.</p>
-<pre><code class="python">userAge = {'Bjorn':32, 'Hatti':18, 'Matthew':44}
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">userAge</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Bjorn&#39;</span><span class="p">:</span><span class="mi">32</span><span class="p">,</span> <span class="s1">&#39;Hatti&#39;</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span> <span class="s1">&#39;Matthew&#39;</span><span class="p">:</span><span class="mi">44</span><span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
 
 <p>Or via a method</p>
-<pre><code class="python">userAge = dict(Bjorn = 32, Hatti = 18, Matthew = 44)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">userAge</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Bjorn</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span> <span class="n">Hatti</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> <span class="n">Matthew</span> <span class="o">=</span> <span class="mi">44</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="to-print-a-users-age">To print a users age</h3>
-<pre><code class="python">print(userAge['Bjorn'])
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">userAge</span><span class="p">[</span><span class="s1">&#39;Bjorn&#39;</span><span class="p">])</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="create-empty-dictinoaries-to-be-filled-in-later">Create empty dictinoaries to be filled in later</h3>
-<pre><code class="python">userName = dict()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">userName</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="add-to-empty-dictionary">Add to empty dictionary</h3>
-<pre><code class="python">userName['John Smith'] = 'jsmith'
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">userName</span><span class="p">[</span><span class="s1">&#39;John Smith&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;jsmith&#39;</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="delete-from-dictionary">Delete from dictionary</h3>
-<pre><code class="python">del userName['John Smith']
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">del</span> <span class="n">userName</span><span class="p">[</span><span class="s1">&#39;John Smith&#39;</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
 
 <h3 id="display-list-in-easy-to-read-format">Display list in easy to read format</h3>
-<pre><code class="python">userCricket = {
-    'Brian Lara' : 'blara',
-    'Courtney Walsh' : 'cwalsh',
-    'Curtley Ambrose' : 'cambrose',
-    'Malcom Marshall' : 'mmarshall',
-}
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">userCricket</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Brian Lara&#39;</span> <span class="p">:</span> <span class="s1">&#39;blara&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Courtney Walsh&#39;</span> <span class="p">:</span> <span class="s1">&#39;cwalsh&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Curtley Ambrose&#39;</span> <span class="p">:</span> <span class="s1">&#39;cambrose&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Malcom Marshall&#39;</span> <span class="p">:</span> <span class="s1">&#39;mmarshall&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
                 
               
               
