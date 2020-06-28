@@ -466,6 +466,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#sequence-layers" class="md-nav__link">
+    Sequence Layers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#vector-redraw" class="md-nav__link">
     Vector Redraw
   </a>
@@ -549,6 +556,13 @@
           <li class="md-nav__item">
   <a href="#null-object" class="md-nav__link">
     Null Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphs" class="md-nav__link">
+    Graphs
   </a>
   
 </li>
@@ -803,6 +817,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#sequence-layers" class="md-nav__link">
+    Sequence Layers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#vector-redraw" class="md-nav__link">
     Vector Redraw
   </a>
@@ -890,6 +911,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#graphs" class="md-nav__link">
+    Graphs
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -962,6 +990,12 @@
 <p>Sounds that go with icons or transitions are called <code>Interfaces</code>.</p>
 <h3 id="offset">Offset</h3>
 <p>This is where you have an overlapped icon and using the overshoot expression looks like the come in after each other. Check out video 19.</p>
+<h3 id="sequence-layers">Sequence Layers</h3>
+<p>To automatically stagger layers, make sure playhead is either at beginning or where you want it to start<br />
+1. Select all layers you want to stagger. Select the first one first.
+2. Animation &gt; Keyframe Assistant &gt; Sequence Layers
+3. Select Overlap
+4. Select how much of an overlap. (This starts backwards. ex: 04:20)</p>
 <h3 id="vector-redraw">Vector Redraw</h3>
 <p>Vector Redraw is when your vector image is redrawn everytime it scales or transforms. By default this is off as it's CPU intensive. To turn it on press the star simple on the layer.<br />
 <img alt="Image" src="../img/after_effects1.jpg" /></p>
@@ -1036,6 +1070,28 @@ See video 16: Animation Tip - Overshoot </p>
 2. New &gt; Null Object
 3. Under Parent &amp; Link select any layer you want to attach to the null object
 4. Adjust Null Object</p>
+<h3 id="graphs">Graphs</h3>
+<p>You can either make them in After Effects which probably looks better but is really hard or use Illustrator's Graph tool and import the data from Excel.<br />
+In Illustrator:  </p>
+<ol>
+<li>Select the graph tool &amp; type of graph.</li>
+<li>Drag size on canvas</li>
+<li>Copy table data from Excel &amp; paste into mini spreadsheet.</li>
+<li>Ungroup the table. Object &gt; Ungroup &gt; Yes</li>
+<li>Make any colour or font ajustments. </li>
+<li>Open up the layer and you'll have to drill down into layer one but basically we need to seperate any object that will animate and put it in it's own layer (That you'll need to create.)</li>
+<li>Save  </li>
+</ol>
+<p>In After Effect:<br />
+1. Import .ai file
+2. Import Kind: Composition
+3. Footage Dimensions: Layer Size
+4. Open up the new composition
+5. Adjust anchor point <code>y</code> and drag whilst pressing <code>shift</code> to snap and straight.
+6. On each layer set break scale axis (little infinity symbol) and start keyframe at <code>0%</code> and then add another keyframe as <code>100%</code>
+7. Optional: <a href="./#Expressions">Add overshoot expression</a>
+8. Highlight all keyframes and set slider at beginnging and <code>Ctrl+C</code> &amp; <code>Ctrol+V</code> on each layer.
+9. You cam manually stagger the keyframes or do this automatically by <a href="./#Sequence">Sequence Layers</a></p>
 <h2 id="video">Video</h2>
 <h3 id="extend-video">Extend Video</h3>
 <p>To freeze the last frame of a video<br />
