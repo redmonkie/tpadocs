@@ -486,6 +486,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#opacity" class="md-nav__link">
+    Opacity
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -574,6 +581,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#track-motion" class="md-nav__link">
+    Track Motion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-motion-tracking" class="md-nav__link">
+    Manual Motion Tracking
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -590,6 +611,33 @@
           <li class="md-nav__item">
   <a href="#extend-video" class="md-nav__link">
     Extend Video
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    Export
+  </a>
+  
+    <nav class="md-nav" aria-label="Export">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#export-to-powerpoint" class="md-nav__link">
+    Export to Powerpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-to-gif" class="md-nav__link">
+    Export to GIF
   </a>
   
 </li>
@@ -844,6 +892,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#opacity" class="md-nav__link">
+    Opacity
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -932,6 +987,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#track-motion" class="md-nav__link">
+    Track Motion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-motion-tracking" class="md-nav__link">
+    Manual Motion Tracking
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -948,6 +1017,33 @@
           <li class="md-nav__item">
   <a href="#extend-video" class="md-nav__link">
     Extend Video
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    Export
+  </a>
+  
+    <nav class="md-nav" aria-label="Export">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#export-to-powerpoint" class="md-nav__link">
+    Export to Powerpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-to-gif" class="md-nav__link">
+    Export to GIF
   </a>
   
 </li>
@@ -1016,6 +1112,8 @@
 <h3 id="masks">Masks</h3>
 <p>Masks use <a href="https://helpx.adobe.com/uk/after-effects/using/alpha-channels-masks-mattes.html#about_alpha_channels_and_mattes">Alpha Channel</a> to create transparency or mask another layer. For example if you wanted part of an image the same dimensions or shape of a solid you can mask it on top.</p>
 <p>Need to write up steps but see Lectures 36 &amp; 37.</p>
+<h3 id="opacity">Opacity</h3>
+<p>Usually you set Opacity as a percentage within the layer. You can gain better type of opacity by changing the mode (Toggle switches) to something like <code>Multiply</code>. There's loads so just go throw and find what works.</p>
 <h2 id="animation">Animation</h2>
 <h3 id="motion-blur">Motion Blur</h3>
 <ol>
@@ -1109,11 +1207,41 @@ In Illustrator:  </p>
 7. Optional: <a href="./#Expressions">Add overshoot expression</a>
 8. Highlight all keyframes and set slider at beginnging and <code>Ctrl+C</code> &amp; <code>Ctrol+V</code> on each layer.
 9. You cam manually stagger the keyframes or do this automatically by <a href="./#Sequence">Sequence Layers</a></p>
+<h3 id="track-motion">Track Motion</h3>
+<p>Window &gt; Tracker &gt; (select layer) &gt; Track Motion </p>
+<h3 id="manual-motion-tracking">Manual Motion Tracking</h3>
+<p>If you can't use camera tracking you can do it frame by frame yourself. (It's not as bad as it sounds when you use shortcuts.)  </p>
+<ol>
+<li>Draw line (press at one point and then the next to what you want to track)</li>
+<li>On the layers: Layer &gt; Contents &gt; Shape 1&gt; Path 1 &gt; Start keyframe</li>
+<li>With Path 1 selected and pen tool enabled click on the point you want to move</li>
+<li>Using <code>Ctrl + Left Arrow Key</code> to move to the next frame.</li>
+<li><code>Shift + Arrow key</code> to move the point to its new destination</li>
+<li>Repeat Steps 4 &amp; 5 </li>
+</ol>
 <h2 id="video">Video</h2>
 <h3 id="extend-video">Extend Video</h3>
 <p>To freeze the last frame of a video<br />
 1. Right-Click on timeline
 2. Time &gt; Freeze On Last Frame</p>
+<h2 id="export">Export</h2>
+<ol>
+<li>Make sure composition is selected</li>
+<li>Composition &gt; Add to Media Encoder Queue.</li>
+</ol>
+<h3 id="export-to-powerpoint">Export to Powerpoint</h3>
+<ol>
+<li>Export to low res. Ex: Target Bitrate: 2, Max Bitrate: 5.</li>
+<li>Ratio Width: 1280, Height: 720  </li>
+</ol>
+<p>When you export the video it will start on the Powerpoint slide as blank so you need generate a poster image.  </p>
+<ol>
+<li>Move cursor to where animation is fully revealed.</li>
+<li>Compsition &gt; Save Frame As &gt; File &gt; Choose Destination</li>
+<li>At the bottom on the screen click render.</li>
+<li>In PowerPoint insert the video and whilst selected goto Video Format &gt; Poster Frame &gt; From File &gt; Insert image (You might have to convert it to jpg or png)</li>
+</ol>
+<h3 id="export-to-gif">Export to GIF</h3>
 <h2 id="shortcuts">Shortcuts</h2>
 <p><code>u</code> On selected Source Name this will only show attributes that are being used.<br />
 <code>F9</code> On selected keyframe applies <code>Easy Ease</code><br />
