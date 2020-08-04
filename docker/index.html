@@ -362,6 +362,33 @@
     Running A Container
   </a>
   
+    <nav class="md-nav" aria-label="Running A Container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli-monitoring" class="md-nav__link">
+    CLI Monitoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell-inside-containers" class="md-nav__link">
+    Shell Inside Containers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-networking" class="md-nav__link">
+    Docker Networking
+  </a>
+  
 </li>
       
     </ul>
@@ -696,6 +723,33 @@
     Running A Container
   </a>
   
+    <nav class="md-nav" aria-label="Running A Container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli-monitoring" class="md-nav__link">
+    CLI Monitoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell-inside-containers" class="md-nav__link">
+    Shell Inside Containers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-networking" class="md-nav__link">
+    Docker Networking
+  </a>
+  
 </li>
       
     </ul>
@@ -763,7 +817,7 @@ $ sudo sh get-docker.sh
 </code></pre></div>
 </td></tr></table>
 
-<p>To show a history</p>
+<p>To show all containers running or not</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker container ls -a
 </code></pre></div>
 </td></tr></table>
@@ -804,6 +858,72 @@ If a container is running and you can be arsed to stop it use the <code>-f</code
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">docker container rm -f 97</span>
 </code></pre></div>
 </td></tr></table>
+
+<h3 id="cli-monitoring">CLI Monitoring</h3>
+<p>Process list in one container</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker container top
+</code></pre></div>
+</td></tr></table>
+
+<p>Details of one container config</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker container inspect
+</code></pre></div>
+</td></tr></table>
+
+<p>Performance stats for all containers</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker container stats
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="shell-inside-containers">Shell Inside Containers</h3>
+<p>Start new container interactively</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker container run -it
+</code></pre></div>
+</td></tr></table>
+
+<p>Run additional command in existing container</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker container <span class="nb">exec</span> -it
+</code></pre></div>
+</td></tr></table>
+
+<p>So the <code>-it</code> option is two options together. <code>-t</code> creates a pseudo shell &amp; <code>-i</code> makes it interactive.<br />
+You can also run a bash shell inside a container.  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>ajoyner@docker:~$ docker container run -it --name proxy nginx bash
+root@eabc41e54023:/# 
+</code></pre></div>
+</td></tr></table>
+
+<p><br></p>
+<p>When you exit out of a container, specially an OS image it will stop. To start it again you don't <code>run</code> but <code>start</code> it.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker container start -ai centOS
+</code></pre></div>
+</td></tr></table>
+
+<p>We still want to be interactive but this time we use the attached <code>-a</code> option.  </p>
+<p><br></p>
+<p>To run a command in a running container you use the <code>exec</code> option.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker container <span class="nb">exec</span> -it mysql bash
+</code></pre></div>
+</td></tr></table>
+
+<p>This will run a bash shell inside a running mysql server.</p>
+<h2 id="docker-networking">Docker Networking</h2>
+<p>To check what ports are mapped to a certain container</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>ajoyner@docker:~$ docker container port webserver 
+<span class="m">80</span>/tcp -&gt; <span class="m">0</span>.0.0.0:80
+</code></pre></div>
+</td></tr></table>
+
+<p>Check IP address of a specific container</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>ajoyner@docker:~$ docker container inspect --format <span class="s1">&#39;{{ .NetworkSettings.IPAddress }}&#39;</span> webserver 
+<span class="m">172</span>.17.0.3
+</code></pre></div>
+</td></tr></table>
+
+<p>This is a NAT address as the host is on the 192.168.0.0/24 network.</p>
                 
               
               
