@@ -389,6 +389,60 @@
     Docker Networking
   </a>
   
+    <nav class="md-nav" aria-label="Docker Networking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-cli-management" class="md-nav__link">
+    Network CLI Management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-docker-netowrk" class="md-nav__link">
+    Create a Docker Netowrk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addmove-container-to-a-network" class="md-nav__link">
+    Add/Move container to a Network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    DNS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-ping-on-nginx" class="md-nav__link">
+    Install ping on NGINX
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -750,6 +804,60 @@
     Docker Networking
   </a>
   
+    <nav class="md-nav" aria-label="Docker Networking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-cli-management" class="md-nav__link">
+    Network CLI Management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-docker-netowrk" class="md-nav__link">
+    Create a Docker Netowrk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addmove-container-to-a-network" class="md-nav__link">
+    Add/Move container to a Network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    DNS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-ping-on-nginx" class="md-nav__link">
+    Install ping on NGINX
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -833,29 +941,29 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 <p>Interestingly the names come from an open sourced list with <code>&lt;adjectives&gt;_&lt;notable scientists/hackers&gt;</code>.</p>
 <p>To name a container use <code>--name</code> tag</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">docker container run --publish 80:80 --detach --name webhost nginx</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker container run --publish <span class="m">80</span>:80 --detach --name webhost nginx
 </code></pre></div>
 </td></tr></table>
 
 <p>When running containers in the background you can't see the logs. To display logs do</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">docker container logs &lt;name/container ID&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker container logs &lt;name/container ID&gt;
 </code></pre></div>
 </td></tr></table>
 
 <p>To see the processes running in a container</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">docker container top &lt;name/container ID&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker container top &lt;name/container ID&gt;
 </code></pre></div>
 </td></tr></table>
 
 <p>To remove a container</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">docker container rm 97 08 2d</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker container rm <span class="m">97</span> <span class="m">08</span> 2d
 </code></pre></div>
 </td></tr></table>
 
 <p>Above is three containers and just the first unique parts of the container ID</p>
 <p>To force remove a container
 If a container is running and you can be arsed to stop it use the <code>-f</code> tag to force it to stop and remove.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">docker container rm -f 97</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker container rm -f <span class="m">97</span>
 </code></pre></div>
 </td></tr></table>
 
@@ -924,6 +1032,188 @@ root@eabc41e54023:/#
 </td></tr></table>
 
 <p>This is a NAT address as the host is on the 192.168.0.0/24 network.</p>
+<h3 id="network-cli-management">Network CLI Management</h3>
+<p>Show networks</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker network ls
+</code></pre></div>
+</td></tr></table>
+
+<p>Default Docker virtual network, which is NAT'ed behind the Host IP</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>ajoyner@docker:~$ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+0e04dd9a6799        bridge              bridge              local
+a14ab2a7952c        host                host                local
+5b9bc7faee3f        none                null                local
+</code></pre></div>
+</td></tr></table>
+
+<p>Inspect a network.  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker network inspect &lt;name&gt;
+</code></pre></div>
+</td></tr></table>
+
+<p>This will show the containers connected to each virtual network interface.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>ajoyner@docker:~$ docker network inspect bridge 
+        <span class="s2">&quot;Containers&quot;</span>: <span class="o">{</span>
+            <span class="s2">&quot;76e57f402ffd28e491d9c36da543225302b90e03f246ab603e1c2fb68580a37c&quot;</span>: <span class="o">{</span>
+                <span class="s2">&quot;Name&quot;</span>: <span class="s2">&quot;database&quot;</span>,
+                <span class="s2">&quot;EndpointID&quot;</span>: <span class="s2">&quot;aa97ce9976506c3b736a47e82d2aa49c9851a00e4171bb793088b40b097cc3d6&quot;</span>,
+                <span class="s2">&quot;MacAddress&quot;</span>: <span class="s2">&quot;02:42:ac:11:00:02&quot;</span>,
+                <span class="s2">&quot;IPv4Address&quot;</span>: <span class="s2">&quot;172.17.0.2/16&quot;</span>,
+                <span class="s2">&quot;IPv6Address&quot;</span>: <span class="s2">&quot;&quot;</span>
+            <span class="o">}</span>,
+            <span class="s2">&quot;ace6346a5e9611cecd13a5fe115e65c6452e776e07d886306a9d638624be90ef&quot;</span>: <span class="o">{</span>
+                <span class="s2">&quot;Name&quot;</span>: <span class="s2">&quot;webserver&quot;</span>,
+                <span class="s2">&quot;EndpointID&quot;</span>: <span class="s2">&quot;c426c48aa94113ec069abd9558f2fa9b3a1b02e2324687f3b5c8b9537ff50eef&quot;</span>,
+                <span class="s2">&quot;MacAddress&quot;</span>: <span class="s2">&quot;02:42:ac:11:00:03&quot;</span>,
+                <span class="s2">&quot;IPv4Address&quot;</span>: <span class="s2">&quot;172.17.0.3/16&quot;</span>,
+                <span class="s2">&quot;IPv6Address&quot;</span>: <span class="s2">&quot;&quot;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>,
+</code></pre></div>
+</td></tr></table>
+
+<p>The interface <code>host</code> attaches the container directly to the host. It gains performance by skipping virtual networks but sacrifices security of container model.<br />
+The interface <code>none</code> or <code>null</code> removes eth0 and only leaves you with localhost interface in container.</p>
+<h3 id="create-a-docker-netowrk">Create a Docker Netowrk</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker network create &lt;name&gt;
+</code></pre></div>
+</td></tr></table>
+
+<p>Spawns a new virtual network so you can attach containers to.  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>ajoyner@docker:~$ docker network create my_network
+01f6cb45714b4b51fbc3144b7fb54b69a80ed5594f56b0a0f9816216a3cf3e31
+
+ajoyner@docker:~$ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+0e04dd9a6799        bridge              bridge              local
+a14ab2a7952c        host                host                local
+01f6cb45714b        my_network          bridge              local
+5b9bc7faee3f        none                null                local
+</code></pre></div>
+</td></tr></table>
+
+<p>The network <code>driver</code> is built-in or 3rd party extensions that give you virtual network features. You can specify this when creating the network with the <code>--driver</code> option.</p>
+<h3 id="addmove-container-to-a-network">Add/Move container to a Network</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>ajoyner@docker:~$ docker container run -d --name webserver --network my_network nginx
+0b43cbdeda4d8769184f3efe008c3df14a0f168548c989846ce4674ae55b9493
+
+ajoyner@docker:~$ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+0e04dd9a6799        bridge              bridge              local
+a14ab2a7952c        host                host                local
+01f6cb45714b        my_network          bridge              local
+5b9bc7faee3f        none                null                local
+</code></pre></div>
+</td></tr></table>
+
+<p>Dynamically create a NIC in a container on an existing virtual network</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker network connect &lt;network&gt; &lt;container_name&gt;
+</code></pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>ajoyner@docker:~$ docker network connect my_network database
+
+ajoyner@docker:~$ docker network inspect my_network 
+            <span class="s2">&quot;76e57f402ffd28e491d9c36da543225302b90e03f246ab603e1c2fb68580a37c&quot;</span>: <span class="o">{</span>
+                <span class="s2">&quot;Name&quot;</span>: <span class="s2">&quot;database&quot;</span>,
+                <span class="s2">&quot;EndpointID&quot;</span>: <span class="s2">&quot;ac87ad3e3ad635b83248623b6d267407d2203d1606e4426b608a26454c2862b8&quot;</span>,
+                <span class="s2">&quot;MacAddress&quot;</span>: <span class="s2">&quot;02:42:ac:12:00:03&quot;</span>,
+                <span class="s2">&quot;IPv4Address&quot;</span>: <span class="s2">&quot;172.18.0.3/16&quot;</span>,
+                <span class="s2">&quot;IPv6Address&quot;</span>: <span class="s2">&quot;&quot;</span>
+            <span class="o">}</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>The container database has two virutal interfaces now</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>ajoyner@docker:~$ docker network inspect bridge 
+            <span class="s2">&quot;76e57f402ffd28e491d9c36da543225302b90e03f246ab603e1c2fb68580a37c&quot;</span>: <span class="o">{</span>
+                <span class="s2">&quot;Name&quot;</span>: <span class="s2">&quot;database&quot;</span>,
+                <span class="s2">&quot;EndpointID&quot;</span>: <span class="s2">&quot;aa97ce9976506c3b736a47e82d2aa49c9851a00e4171bb793088b40b097cc3d6&quot;</span>,
+                <span class="s2">&quot;MacAddress&quot;</span>: <span class="s2">&quot;02:42:ac:11:00:02&quot;</span>,
+                <span class="s2">&quot;IPv4Address&quot;</span>: <span class="s2">&quot;172.17.0.2/16&quot;</span>,
+                <span class="s2">&quot;IPv6Address&quot;</span>: <span class="s2">&quot;&quot;</span>
+            <span class="o">}</span>
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="dns">DNS</h3>
+<ul>
+<li>Docker deamon has a built-in DNS server that containers use by default  </li>
+<li>By default containers can communicate with each other using their container names. You can also set alias's.</li>
+</ul>
+<h2 id="tips">Tips</h2>
+<h3 id="install-ping-on-nginx">Install ping on NGINX</h3>
+<p>Get inside my_nginx container shell</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker <span class="nb">exec</span> -it &lt;container name&gt; bash
+</code></pre></div>
+</td></tr></table>
+
+<p>From inside container shell:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">apt-get update</span>
+<span class="err">apt-get install iputils-ping</span>
+<span class="err">exit</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>Now the following should work:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>docker <span class="nb">exec</span> -it &lt;container A&gt; ping &lt;container B&gt;
+</code></pre></div>
+</td></tr></table>
                 
               
               
